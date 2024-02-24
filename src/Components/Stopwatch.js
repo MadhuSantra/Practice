@@ -8,11 +8,11 @@ function Stopwatch() {
   useEffect(() => {
     let timerId;
     if (stopWatchStarted) {
-      timerId = setInterval(() => {
+      timerId = setTimeout(() => {
         setTime(time + 1);
       }, 1000);
     }
-    return () => clearInterval(timerId);
+    return () => clearTimeout(timerId);
   }, [stopWatchStarted, time]);
 
   const handleResetStopwatch = () => {
