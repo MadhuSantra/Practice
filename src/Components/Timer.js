@@ -1,17 +1,21 @@
 import React from "react";
 
-function Timer(props) {
-  console.log(props);
+function Timer({
+  time,
+  handleResetStopwatch,
+  stopWatchStarted,
+  setStopwatchStarted,
+}) {
   return (
     <>
-      {props.time}
+      {time}
       <button
         type="button"
-        onClick={() => props.setStopwatchStarted(!props.stopWatchStarted)}
+        onClick={() => setStopwatchStarted(!stopWatchStarted)}
       >
-        {props.stopWatchStarted ? <>Pause</> : <>Start</>}
+        {stopWatchStarted ? <>Pause</> : <>Start</>}
       </button>
-      <button type="button" onClick={() => props.handleResetStopwatch()}>
+      <button type="button" onClick={() => handleResetStopwatch()}>
         Reset
       </button>
     </>

@@ -27,8 +27,8 @@ function Stopwatch() {
           time,
           handleResetStopwatch,
           stopWatchStarted,
+          setStopwatchStarted,
         }}
-        // time={time}
       />
     </>
   );

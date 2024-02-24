@@ -1,13 +1,14 @@
 import "./App.css";
 import Pagination from "./Components/Pagination";
 import Password from "./Components/Password";
+import Stopwatch from "./Components/Stopwatch";
 import Timer from "./Components/Timer";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       {/* <Password /> */}
-      <Timer />
+      <Stopwatch />
       {/* <Pagination /> */}
     </div>
   );
