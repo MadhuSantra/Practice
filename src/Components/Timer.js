@@ -1,14 +1,19 @@
-import react, { useEffect, useState } from "react";
+import React from "react";
 
-function Timer() {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    setTimeout(setCount(count + 1), 1000);
-  });
+function Timer(props) {
+  console.log(props);
   return (
     <>
-      <h1>Timer</h1>
-      <h2>{count}</h2>
+      {props.time}
+      <button
+        type="button"
+        onClick={() => props.setStopwatchStarted(!props.stopWatchStarted)}
+      >
+        {props.stopWatchStarted ? <>Pause</> : <>Start</>}
+      </button>
+      <button type="button" onClick={() => props.handleResetStopwatch()}>
+        Reset
+      </button>
     </>
   );
 }

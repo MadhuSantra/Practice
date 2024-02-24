@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       {/* <Password /> */}
-      {/* <Timer /> */}
-      <Pagination />
+      <Timer />
+      {/* <Pagination /> */}
     </div>
   );
 }
